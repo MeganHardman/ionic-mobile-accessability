@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Options</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label item-left>Text Size</ion-label>
+    <ion-badge item-right> {{textSize}} % </ion-badge>
+  </ion-item>
+  <ion-range min= "100" max="200"(ionChange)="onTextChange()" [(ngModel)]="textSize" color="primary" pin="false"></ion-range>
+  <button ion-button full (click)="onFromSettings()">Set Text Size From Phone Settings</button>
+</ion-content>

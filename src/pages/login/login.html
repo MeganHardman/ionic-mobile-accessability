@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      Login Page
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onOptions()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-input [(ngModel)]="username" type="text" placeholder="username"></ion-input>
+  <p></p>
+  <ion-input [(ngModel)]="password" type="text" placeholder="password"></ion-input>
+  <p>
+    <button ion-button block (click)="onLogin()">Login</button>
+  </p>
+  <p>
+    <button ion-button block (click)="fingerprintLogin()">Login with fingerprint</button>
+  </p>
+</ion-content>

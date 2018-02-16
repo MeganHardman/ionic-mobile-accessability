@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>
+    Home Page
+  </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onTakePhoto()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="onOptions()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <div *ngFor=" let photo of photos">
+      <img [src]="photo"/>
+    </div>
+  </div>
+</ion-content>
